@@ -1,0 +1,27 @@
+﻿<Page x:Class="PetShop.AutoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PetShop"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="AutoPage">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#a1d8c6"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap"   Text="Добрый день! Пожалуйста, авторизуйтесь!" VerticalAlignment="Top" Height="53" Width="587" FontSize="20" Padding="0,5,0,0"   Foreground="Black" FontWeight="Bold" FontFamily="Book Antiqua ITC" TextAlignment="Center" />
+        <TextBox  x:Name="Login" HorizontalAlignment="Center" Margin="-500,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Center" Width="250" Height="50" TextChanged="Login_TextChanged" Background="#a1d8c6"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Center" Margin="500,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Center" Width="250" Height="50" TextChanged="Password_TextChanged" Background="#a1d8c6"/>
+        <Button x:Name="BUT_LogIn" Content="Войти" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Center" Width="250" Height="80" Click="BUT_LogIn_Click" Background="#44a486" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Button x:Name="BUT_Exit" Content="Закрыть" HorizontalAlignment="Center" Margin="0,600,0,0" VerticalAlignment="Center" Width="200" Height="70" Click="BUT_Exit_Click" Background="#FFACAC" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Label Content="Логин" HorizontalAlignment="Center" Margin="-500,-100,0,0" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Label Content="Пароль" HorizontalAlignment="Center" Margin="500,-100,0,0" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+
+    </Grid>
+</Page>

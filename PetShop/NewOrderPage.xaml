@@ -1,0 +1,37 @@
+﻿<Page x:Class="PetShop.NewOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PetShop"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="NewOrderPage">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#a1d8c6"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Button x:Name="BUT_Reurn" Content="Назад"   HorizontalAlignment="Left" Margin="940,634,0,0" VerticalAlignment="Top" Height="80" Width="200" Background="#FFACAC" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Reurn_Click"/>
+        <Label Content="Клиент" HorizontalAlignment="Left" Margin="68,101,0,0" VerticalAlignment="Top" Height="28" Width="136" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Label Content="Товар" HorizontalAlignment="Left" Margin="68,164,0,0" VerticalAlignment="Top" Height="28" Width="136"  FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="68,232,0,0" VerticalAlignment="Top" Height="28" Width="136" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="68,312,0,0" VerticalAlignment="Top" Height="28" Width="136" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Label Content="Сумма" HorizontalAlignment="Left" Margin="68,376,0,0" VerticalAlignment="Top" Height="28" Width="136" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="236,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Найти" HorizontalAlignment="Left" Margin="409,101,0,0" VerticalAlignment="Top" Background="#54ac8c" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="236,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Найти" HorizontalAlignment="Left" Margin="409,164,0,0" VerticalAlignment="Top" Background="#54ac8c" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="236,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="236,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="236,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="PoductList" Margin="600,66,52,242" SelectionChanged="PoductList_SelectionChanged"/>
+        <Label Content="Список товаров в корзине" HorizontalAlignment="Left" Margin="766,30,0,0" VerticalAlignment="Top"  FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
+        <Button x:Name="BUT_Done" Content="Оформить покупку" HorizontalAlignment="Left"  Height="80" Width="250" Margin="143,634,0,0" VerticalAlignment="Top" Background="#54ac8c" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Done_Click"/>
+        <Button x:Name="BUT_Add" Content="Добвить еще продукт" HorizontalAlignment="Left"  Height="50" Width="180" Margin="178,542,0,0" VerticalAlignment="Top" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Add_Click"/>
+    </Grid>
+</Page>
