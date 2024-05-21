@@ -18,6 +18,7 @@ namespace PetShop
         public Product()
         {
             this.Order = new HashSet<Order>();
+            this.OrderLine = new HashSet<OrderLine>();
             this.Supply1 = new HashSet<Supply>();
         }
     
@@ -30,6 +31,8 @@ namespace PetShop
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderLine> OrderLine { get; set; }
         public virtual Supply Supply { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Supply> Supply1 { get; set; }

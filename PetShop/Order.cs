@@ -18,6 +18,7 @@ namespace PetShop
         public Order()
         {
             this.Card = new HashSet<Card>();
+            this.OrderLine = new HashSet<OrderLine>();
         }
     
         public int Order_ID { get; set; }
@@ -33,5 +34,7 @@ namespace PetShop
         public virtual Customer Customer { get; set; }
         public virtual Product Product { get; set; }
         public virtual Worker Worker { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderLine> OrderLine { get; set; }
     }
 }

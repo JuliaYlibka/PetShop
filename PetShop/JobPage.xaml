@@ -8,7 +8,16 @@
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="JobPage">
     <Grid Background="#a1d8c6">
-        <DataGrid x:Name="DGrid" SelectionChanged="DGrid_SelectionChanged" Height="612" VerticalAlignment="Top"/>
+        <DataGrid AutoGenerateColumns="False" x:Name="DGrid" SelectionChanged="DGrid_SelectionChanged" Height="612" VerticalAlignment="Top">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Job_ID}" Width="*"/>
+
+                <DataGridTextColumn Header="Название" Binding="{Binding Название}" Width="2*"/>
+                <DataGridTextColumn Header="Оклад" Binding="{Binding Оклад}" Width="2*"/>
+               
+            </DataGrid.Columns>
+        </DataGrid>
         <Button x:Name="BUT_Change" Content="Изменить" HorizontalAlignment="Left" Margin="246,660,0,0" VerticalAlignment="Top" Width="250" Height="80" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16"/>
         <Button x:Name="BUT_Add" Content="Добавить" HorizontalAlignment="Left" Margin="571,660,0,0" VerticalAlignment="Top" Width="250" Height="80" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Add_Click"/>
         <Button x:Name="BUT_Delete" Content="Удалить" HorizontalAlignment="Left" Margin="896,660,0,0" VerticalAlignment="Top" Width="250" Height="80" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" />

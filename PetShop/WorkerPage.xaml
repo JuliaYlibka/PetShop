@@ -8,8 +8,21 @@
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="WorkerPage">
     <Grid Background="#a1d8c6">
-        <DataGrid x:Name="DGrid" SelectionChanged="DGrid_SelectionChanged" Height="612" VerticalAlignment="Top"/>
-        <Button x:Name="BUT_Change" Content="Изменить" HorizontalAlignment="Left" Margin="246,660,0,0" VerticalAlignment="Top" Width="250" Height="80" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Change_Click"/>
+            <DataGrid AutoGenerateColumns="False" x:Name="DGrid" SelectionChanged="DGrid_SelectionChanged" Height="612" VerticalAlignment="Top">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Номер" Binding="{Binding Worker_ID}" Width="*"/>
+
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding Фамилия}" Width="2*"/>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding Имя}" Width="2*"/>
+                    <DataGridTextColumn Header="Отчество" Binding="{Binding Отчество}" Width="2*"/>
+                    <DataGridTextColumn Header="Паспорт" Binding="{Binding ДанныеПаспорта}" Width="2*"/>
+                    <DataGridTextColumn Header="Должность" Binding="{Binding Job.Название}" Width="2*"/>
+                    <DataGridTextColumn Header="Дата устройства" Binding="{Binding ДатаНачалаРаботы}" Width="2*"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="BUT_Change" Content="Изменить" HorizontalAlignment="Left" Margin="246,660,0,0" VerticalAlignment="Top" Width="250" Height="80" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Change_Click"/>
         <Button x:Name="BUT_Add" Content="Добавить" HorizontalAlignment="Left" Margin="571,660,0,0" VerticalAlignment="Top" Width="250" Height="80" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Add_Click"/>
         <Button x:Name="BUT_Delete" Content="Удалить" HorizontalAlignment="Left" Margin="896,660,0,0" VerticalAlignment="Top" Width="250" Height="80" Background="#6faea0" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Delete_Click" />
         <Button x:Name="BUT_Return" Content="Назад" HorizontalAlignment="Left" Margin="41,675,0,0" VerticalAlignment="Top" Width="100" Height="50" Background="#FFACAC" FontWeight="Bold" FontFamily="Book Antiqua" FontSize="16" Click="BUT_Return_Click"/>

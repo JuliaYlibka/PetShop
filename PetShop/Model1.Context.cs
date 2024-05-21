@@ -17,7 +17,7 @@ namespace PetShop
     {
         private static ZooEntities _context;
         public ZooEntities()
-            : base("name=ZooEntities")
+            : base("name=ЗоомагазинEntities")
         {
         }
         public static ZooEntities GetContext()
@@ -36,6 +36,7 @@ namespace PetShop
         public virtual DbSet<Customer> Customer { get; set; }
         public virtual DbSet<Job> Job { get; set; }
         public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<OrderLine> OrderLine { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Provider> Provider { get; set; }
         public virtual DbSet<Supply> Supply { get; set; }
